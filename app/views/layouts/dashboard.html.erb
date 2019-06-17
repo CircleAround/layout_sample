@@ -1,0 +1,31 @@
+<% content_for :content do %>
+
+  <div class=" px-4 pt-1 mt-5">
+
+    <main class="col-md-9 ml-sm-auto col-lg-10">
+
+      <div style="border: #2E2F30 1px solid; background-color: red;; margin-bottom: 5px">
+        views/layouts/dashboard.html.erbのコンテンツ
+      </div>
+
+      <% if content_for? :sub_content %>
+        <div style="background-color: lightgreen">
+          <%= yield :sub_content %>
+        </div>
+      <% end %>
+
+      <% if content_for? :main_content %>
+        <div style="background-color: yellow; margin-bottom: 5px">
+          <%= yield :main_content %>
+        </div>
+      <% else %>
+        <div style="background-color: #999999; margin-bottom: 5px">
+          <%= yield %>
+        </div>
+      <% end %>
+    </main>
+
+  </div>
+<% end %>
+
+<%= render template: 'layouts/application' %>

@@ -1,0 +1,8 @@
+<% content_for :sub_content do %>
+  <div style="border: 1px solid black; margin-bottom: 5px">
+    <div>ここは content_for :sub_content に埋め込まれる</div>
+    <h2>サブコンテンツが入る</h2>
+  </div>
+<% end %>
+
+<%= render template: 'layouts/dashboard' %>

@@ -1,0 +1,30 @@
+<h1>Roots#index</h1>
+<h3>継承元:ApplicationController</h3>
+<h3>レイアウトファイル: views/layouts/application.html.erb</h3>
+
+<div>
+  <%= link_to "adminへ", admin_path %>
+  <%= link_to "usersへ", users_path %>
+  <%= link_to "specialへ", special_path %>
+</div>
+
+<div>
+  コンテンツの呼び出され方で背景色が変わる
+  <ul>
+    <li style="border: 1px solid black; margin-bottom: 5px">
+      レイアウトファイルがapplication.html.erb => 白(枠線のみ)
+    </li>
+    <li style="margin-bottom: 5px;background-color: red">
+      dashboard.html.erbのコンテンツ => 赤色
+    </li>
+    <li style="margin-bottom: 5px; background-color: yellow ">
+      special.html.erbのコンテンツ => 黄色
+    </li>
+    <li style="margin-bottom: 5px; background-color: #999999">
+      dashboard.html.erbの yield で埋め込まれるコンテンツ => 灰色
+    </li>
+    <li style="margin-bottom: 5px; background-color: lightgreen">
+      dashboard.html.erbの sub_contentに埋め込まれるコンテンツ => 緑
+    </li>
+  </ul>
+</div>
