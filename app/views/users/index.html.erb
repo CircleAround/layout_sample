@@ -1,5 +1,4 @@
 <div style="border: 1px solid black">
-  <div>こっちは dashboard.html.erb の yield に埋め込まれる</div>
   <h1>
     UsersController#index
   </h1>
@@ -8,5 +7,11 @@
   <h3>レイアウトファイル: views/layouts/aaaa.html.erb</h3>
 
 
+  <div>こっちは dashboard.html.erb の yield に埋め込まれる</div>
+  <div>
+    <%= link_to "ルートへ", root_path %>
+    <%= link_to "adminへ", admin_path %>
+    <%= link_to "usersへ", users_path %>
+    <%= link_to "specialへ", special_path %>
+  </div>
 </div>
-<%= link_to "ルートへ", root_path %>

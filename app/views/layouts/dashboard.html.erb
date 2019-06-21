@@ -10,6 +10,7 @@
 
       <% if content_for? :sub_content %>
         <div style="background-color: lightgreen">
+          <div>viewファイル単位でsub_contentを用意すれば差し替えできる</div>
           <%= yield :sub_content %>
         </div>
       <% end %>

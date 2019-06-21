@@ -1,7 +1,12 @@
+<!--ここでこのレイアウト特有のcssファイルを読み込むようにする-->
+<% content_for :styles do %>
+  <%= stylesheet_link_tag 'second_dashboard', media: 'all' %>
+<% end %>
+
 <% content_for :sub_content do %>
   <div style="border: 1px solid black; margin-bottom: 5px">
     <div>ここは content_for :sub_content に埋め込まれる</div>
-    <h2>サブコンテンツが入る</h2>
+    <h2>aaaaのサブコンテンツが入る</h2>
   </div>
 <% end %>
 

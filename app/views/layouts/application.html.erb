@@ -4,6 +4,12 @@
     <title>LayoutSample</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <% if content_for? :styles %>
+      <%=  yield :styles %>
+    <% else %>
+      <%= stylesheet_link_tag 'application', media: 'all' %>
+    <% end %>
   </head>
 
   <body>

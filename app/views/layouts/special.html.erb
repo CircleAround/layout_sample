@@ -1,10 +1,19 @@
-<% content_for :main_content do %>
-  <h1>
-    AdminController#special
-  </h1>
+<% content_for :sub_content do %>
+  <div style="border: 1px solid black; margin-bottom: 5px">
+    <div>ここは content_for :sub_content に埋め込まれる</div>
+    <h2>specialのサブコンテンツ</h2>
+  </div>
+<% end %>
 
-  <h3>継承元:DashboardController</h3>
-  <%= yield %>
+<% content_for :main_content do %>
+  <div style="border: 1px solid black">
+    <h1>
+      AdminController#special
+    </h1>
+
+    <h3>継承元:DashboardController</h3>
+    <%= yield %>
+  </div>
 <% end %>
 
 <%= render template: 'layouts/dashboard' %>
